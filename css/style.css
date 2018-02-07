@@ -1,0 +1,6 @@
+*{padding: 0;margin: 0}
+body{text-align: center;padding: 20px}
+button{padding: 5px;cursor: pointer; }
+.bg-color{
+    background-color: #ededed;
+}
