@@ -79,3 +79,32 @@ function init(n) {
 
 init(2);
 
+//左键
+function pressLeft() {
+    alert('左键')
+}
+//右键
+function pressRight() {
+    alert('右键')
+}
+//上键
+function pressUp() {
+    alert('上键')
+}
+//下键
+function pressDown() {
+    alert('下键')
+}
+
+document.onkeydown=function(e){
+    if(e && e.keyCode==37){
+        pressLeft();
+    }else if(e && e.keyCode==39){
+        pressRight();
+    }else if(e && e.keyCode==38){
+        pressUp();
+    }else if(e && e.keyCode==40){
+        pressDown();
+    }
+
+}
