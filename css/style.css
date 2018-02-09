@@ -4,3 +4,19 @@ button{padding: 5px;cursor: pointer; }
 .bg-color{
     background-color: #ededed;
 }
+.wrap{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    background-color: #f2eada;
+    height:320px;
+    width: 340px;
+}
+.wrap .block {
+    margin: 10px;
+    height: 60px;
+    width: 60px;
+    background-color: #f6f5ec;
+    border-radius: 2px;
+}
