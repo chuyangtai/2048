@@ -5,7 +5,7 @@ function DivBlcok(className) {
         this.newDiv.classList.add(className);
     }
     this.changeNumAndColor = function (num) {
-        this.num=num;
+        this.num = num;
         this.newDiv.innerText = num;
         if (num == 2) {
             this.newDiv.style.backgroundColor = '#f1e5d7';
@@ -42,14 +42,17 @@ function randerNum() {
     //console.log(array);
     return r * 2;
 }
-var divArrEmpty=[];
-var divArrNum=[];
+
+var divArrEmpty = [];
+var divArrNum = [];
+
 //随机块对象生成
 function randerObject() {
-    var p=Math.floor(Math.random() * 16);
-    var divObject=divArrEmpty[p];
+    var p = Math.floor(Math.random() * divArrEmpty.length);
+    console.log(p)
+    var divObject = divArrEmpty[p];
     divArrNum.push(divObject);
-    divArrEmpty.splice(p,1);
+    divArrEmpty.splice(p, 1);
     return divObject;
 }
 
@@ -57,7 +60,7 @@ function randerObject() {
 function sence(x, y) {
     for (var i = 0; i < x; i++) {
         for (var j = 0; j < y; j++) {
-            var className = 'x' + (i + 1) +'y'+  (j + 1);
+            var className = 'x' + (i + 1) + 'y' + (j + 1);
             divArrEmpty.push(new DivBlcok('', className));
         }
     }
@@ -66,13 +69,13 @@ function sence(x, y) {
 //初始化
 function init(n) {
     sence(4, 4);
-    console.log(divArrEmpty);
     for (var j = 0; j < n; j++) {
         var divObject = randerObject();
-        divObject.changeNumAndColor(randerNum());
         console.log(divObject);
+        divObject.changeNumAndColor(randerNum());
     }
 }
 
 
 init(2);
+
