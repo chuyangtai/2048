@@ -61,7 +61,7 @@ function sence(x, y) {
     for (var i = 0; i < x; i++) {
         for (var j = 0; j < y; j++) {
             var className = 'x' + (i + 1) + 'y' + (j + 1);
-            divArrEmpty.push(new DivBlcok('', className));
+            divArrEmpty.push(new DivBlcok(className));
         }
     }
 }
@@ -81,7 +81,11 @@ init(2);
 
 //左键
 function pressLeft() {
-    alert('左键')
+    console.log(divArrNum[0])
+    $(divArrNum[0]).animate({
+        top:0,
+        left:0
+    },200)
 }
 //右键
 function pressRight() {
@@ -97,6 +101,9 @@ function pressDown() {
 }
 
 document.onkeydown=function(e){
+    if(divArrEmpty.length<0){
+        console.log('游戏结束');
+    }
     if(e && e.keyCode==37){
         pressLeft();
     }else if(e && e.keyCode==39){
@@ -106,5 +113,4 @@ document.onkeydown=function(e){
     }else if(e && e.keyCode==40){
         pressDown();
     }
-
 }
