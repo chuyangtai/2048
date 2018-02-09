@@ -6,22 +6,23 @@ button{padding: 5px;cursor: pointer; }
 }
 #scene{
     text-align: left;
-    padding: 20px;
+    padding: 5px;
     width: 400px;
     height: 400px;
-    background-color:#d5c8aa;margin: 10px auto}
+    background-color:#c3ac9c;margin: 10px auto;
+}
 .div-block{
     box-sizing: border-box;
     text-align: center;
     color: #575757;
     font-weight: 600;
     border-radius:4px;
-    background-color: #cdb271;
+    background-color: #d1c1af;
     height: 90px;
     width: 90px;
     margin: 5px;
     padding: 5px;
-    display: inline-block;
     line-height: 80px;
     font-size: 30px;
+    float: left;
 }
